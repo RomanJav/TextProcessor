@@ -12,8 +12,7 @@ public class Sentence {
 		for (Word word : this.sentence) {
 			if (sentence == "") {
 				sentence = word.getWord();
-			}
-			else {
+			} else {
 				sentence = sentence + " " + word.getWord();
 			}
 		}
@@ -31,14 +30,13 @@ public class Sentence {
 	public Sentence(String paragraph) {
 		setSentence(paragraph);
 	}
-	
+
 	public Integer getCountOfWords() {
-		int wordCounter=0;
+		int wordCounter = 0;
 		for (Word word : sentence) {
 			wordCounter++;
 		}
 		return wordCounter;
 	}
-	
 
 }
