@@ -14,10 +14,10 @@ public class Paragraph {
 			if (paragraph == "") {
 				paragraph = sentence.getSentence();
 			} else {
-				paragraph = paragraph + " " + sentence.getSentence();
+				paragraph = paragraph + sentence.getSentence();
 			}
 		}
-		return paragraph;
+		return paragraph.trim();
 	}
 
 	public void setParagraph(String text) {

@@ -11,12 +11,15 @@ public class Sentence {
 		String sentence = "";
 		for (Word word : this.sentence) {
 			if (sentence == "") {
-				sentence = word.getWord();
+				sentence = word.getWord() + word.getSymbol();
+			} else if (word.getSymbol() == ' ') {
+				sentence = sentence + word.getWord() + word.getSymbol();
 			} else {
-				sentence = sentence + " " + word.getWord();
+				sentence = sentence + word.getWord() + word.getSymbol() + " ";
 			}
 		}
 		return sentence;
+
 	}
 
 	public void setSentence(String paragraph) {
