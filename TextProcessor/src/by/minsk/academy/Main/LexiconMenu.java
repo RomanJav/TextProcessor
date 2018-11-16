@@ -11,7 +11,7 @@ import java.util.Scanner;
 import by.minsk.academy.Lexicon.Paragraph;
 
 public class LexiconMenu {
-	Paragraph text;
+	private Paragraph text;
 
 	public LexiconMenu(String path) throws IOException {
 		try {
@@ -45,19 +45,19 @@ public class LexiconMenu {
 		}
 	}
 
-	public void showText() {
+	private void showText() {
 		System.out.println(text.getParagraph());
 	}
 
-	public void showTextByDropSentences() {
+	private void showTextByDropSentences() {
 		text.sentencesInParagraph();
 	}
 
-	public void sortTextByWordsCount() {
+	private void sortTextByWordsCount() {
 		text.sort();
 	}
 
-	public void writeTextInNewFile() {
+	private void writeTextInNewFile() {
 		FileOutputStream os;
 		try {
 			os = new FileOutputStream("C://Users//Dude//Desktop//text2.txt");
